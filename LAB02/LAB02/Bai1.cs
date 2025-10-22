@@ -24,7 +24,7 @@ namespace LAB02
 
             try
             {
-                using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read))
+                using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Read))
                 using (StreamReader sr = new StreamReader(fs))
                 {
                     string content = sr.ReadToEnd();
